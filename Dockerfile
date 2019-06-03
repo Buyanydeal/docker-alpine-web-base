@@ -28,6 +28,7 @@ RUN apk update
 
 RUN set -xe \
 	&& apk add --no-cache --virtual .build-deps \
+	postgresql-dev \
 	icu-dev \
 	libpng-dev \
 	libjpeg-turbo-dev \
@@ -72,6 +73,8 @@ RUN set -xe \
 	# mbstring \ warning: mbstring (mbstring.so) is already loaded!
 	# pdo \ warning: pdo (pdo.so) is already loaded!
 	pdo_mysql \
+	pdo_pgsql \
+	pgsql \
 	mysqli \
 	readline \
 	recode \
